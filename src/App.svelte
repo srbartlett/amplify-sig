@@ -18,8 +18,8 @@
   let user;
 
   onMount(async () => {
+
     user = await Auth.currentUserInfo();
-    console.log(user);
 
     client
       .query({
@@ -42,6 +42,7 @@
   }
 
   function logout() {
+    console.log("log out")
     Auth.signOut();
   }
 </script>
